@@ -23,6 +23,7 @@
     document.getElementById('open').href = appUrl;
 
     // Try auto-open
+    
     const t0 = Date.now();
     window.location.replace(appUrl);
 
@@ -30,7 +31,7 @@
     setTimeout(() => {
       // If user is still here ~1.5s later, assume scheme failed
       if (Date.now() - t0 > 1400) {
-        window.location.href = "https://apps.apple.com/app/idYOUR_APP_ID";
+        window.location.href = "https://apps.apple.com/us/app/yoodio-radio/id6743950965";
       }
     }, 1500);
   </script>
