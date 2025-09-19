@@ -23,17 +23,9 @@
     document.getElementById('open').href = appUrl;
 
     // Try auto-open
-    
     const t0 = Date.now();
     window.location.replace(appUrl);
-
-    // Optional: after 1.5s, if app isn’t installed, send to App Store / info page
-    setTimeout(() => {
-      // If user is still here ~1.5s later, assume scheme failed
-      if (Date.now() - t0 > 1400) {
-        window.location.href = "https://apps.apple.com/us/app/yoodio-radio/id6743950965";
-      }
-    }, 1500);
+    
   </script>
 </body>
 </html>
