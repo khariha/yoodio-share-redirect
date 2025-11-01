@@ -26,10 +26,8 @@
     <p>If nothing happens, tap the button below to open Yoodio.</p>
     <a id="open" class="btn" href="#">Open Yoodio</a>
     <script>
-        // Extract stationId from the URL path
-        // Assumes URL format: share.yoodioapp.com/share/STATION_ID
-        const pathParts = window.location.pathname.split('/').filter(part => part.length > 0);
-        const stationId = pathParts.length >= 2 && pathParts[0] === 'share' ? pathParts[1] : null;
+        const params = new URLSearchParams(window.location.search);
+        const stationId = params.get("stationId");
         const appUrl = stationId ? `yoodio://share?stationId=${encodeURIComponent(stationId)}` : `yoodio://share`;
         // Set button href
         document.getElementById('open').href = appUrl;
