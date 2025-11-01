@@ -6,18 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting...</title>
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const stationId = params.get("stationId");
-        if (stationId) {
-            window.location.href = `yoodio://share-station?stationId=${stationId}`;
-        } else {
-            window.location.href = "https://yoodioapp.com";
-        }
+        window.location.href = "https://yoodioapp.com";
     </script>
 </head>
 
 <body>
-    <h1>Opening Yoodio...</h1>
+    <h1>Redirecting to Yoodio...</h1>
 </body>
 
 </html>
