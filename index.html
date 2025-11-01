@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,16 @@
     <script>
         const params = new URLSearchParams(window.location.search);
         const stationId = params.get("stationId");
-
         if (stationId) {
             window.location.href = `yoodio://share-station?stationId=${stationId}`;
         } else {
-            document.body.innerHTML = "<h1>Invalid link.</h1>";
+            window.location.href = "https://yoodioapp.com";
         }
     </script>
 </head>
+
 <body>
     <h1>Opening Yoodio...</h1>
 </body>
+
 </html>
